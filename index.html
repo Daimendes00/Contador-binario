@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pot-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inputContainer">
+            <input type="text" maxlength="9" onchange="converter(this.value)">
+        </div>
+        <div class="outputContainer" style="width:100%; word-wrap: break-word; display: inline-block;">
+            <h1 id="res">0</h1>
+
+
+        </div>
+    </div>
+    <script>
+        function converter(num) {
+            console.log(typeof num)
+            var dec = parseInt(num)
+            console.log(typeof dec)
+            var bin = dec.toString(2)
+            document.getElementById("res").innerText = bin
+        }
+    </script>
+
+
+
+</body>
+
+</html>
